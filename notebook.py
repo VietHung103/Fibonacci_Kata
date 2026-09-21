@@ -56,6 +56,32 @@ def test_fibonacci_2():
     assert fibonacci(2) == 1
 
 
+@app.cell(hide_code=True)
+def _(mo):
+    mo.md(r"""
+    ##Widget
+    """)
+    return
+
+
+@app.cell
+def _(mo):
+    input_number = mo.ui.number(start=0, stop=1000, step=1, value=10, label="Enter n:")
+    return (input_number,)
+
+
+@app.cell
+def _(input_number):
+    input_number
+    return
+
+
+@app.cell
+def _(input_number, mo):
+    mo.md(f"**F({input_number.value}) = {fibonacci(input_number.value)}**")
+    return
+
+
 @app.cell
 def _():
     return
