@@ -22,6 +22,8 @@ def _(mo):
 
 @app.function
 def fibonacci(n):
+    if n < 0:
+        raise ValueError("Fibonacci must be non negative-integer.")
     if n<=1:
         return n
     a = 0
