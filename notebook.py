@@ -22,7 +22,13 @@ def _(mo):
 
 @app.function
 def fibonacci(n):
-    raise NotImplementedError
+    if n<=1:
+        return n
+    a = 0
+    b = 1
+    for i in range (n-1):
+        a,b = b, a+b
+    return b
 
 
 @app.cell(hide_code=True)
@@ -46,6 +52,11 @@ def test_fibonacci_1():
 @app.function
 def test_fibonacci_2():
     assert fibonacci(2) == 1
+
+
+@app.cell
+def _():
+    return
 
 
 if __name__ == "__main__":
