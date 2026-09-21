@@ -82,9 +82,14 @@ def _(input_number, mo):
     return
 
 
-@app.cell
-def _():
-    return
+@app.function
+def test_fibonacci_largevalue():
+    import time
+    start = time.time()
+    result = fibonacci(10000000)
+    computation = time.time() - start
+    assert isinstance(result,int)
+    assert computation <1.0
 
 
 if __name__ == "__main__":
