@@ -17,7 +17,6 @@ def _(mo):
     #Step1: Only fibonacci signature function
     Define the test list -> expectation: all the tests would be f
     """)
-    return
 
 
 @app.function
@@ -38,7 +37,6 @@ def _(mo):
     mo.md(r"""
     ##Test list
     """)
-    return
 
 
 @app.function(hide_code=True)
@@ -61,7 +59,6 @@ def _(mo):
     mo.md(r"""
     ##Widget
     """)
-    return
 
 
 @app.cell
@@ -73,18 +70,21 @@ def _(mo):
 @app.cell
 def _(input_number):
     input_number
-    return
 
 
 @app.cell
 def _(input_number, mo):
     mo.md(f"**F({input_number.value}) = {fibonacci(input_number.value)}**")
-    return
 
 
-@app.cell
-def _():
-    return
+@app.function
+def test_fibonacci_largevalue():
+    import time
+    start = time.time()
+    result = fibonacci(10000000)
+    computation = time.time() - start
+    assert isinstance(result,int)
+    assert computation <1.0
 
 
 if __name__ == "__main__":
