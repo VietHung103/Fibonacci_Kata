@@ -1,11 +1,11 @@
-#/// script
+# /// script
 # requires-python = ">=3.11"
 # dependencies = [
 #     "fibonacci-tdd-kata-viethung103",
 #     "marimo>=0.10",
 #     "matplotlib",
 # ]
-#///
+# ///
 
 import marimo
 
