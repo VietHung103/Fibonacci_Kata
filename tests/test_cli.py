@@ -26,6 +26,7 @@ def test_main_prints_range(monkeypatch, capsys):
     lines = capsys.readouterr().out.strip().splitlines()
     assert lines == ["0", "1", "1", "2", "3", "5", "8", "13"]
 
+
 def test_main_requires_an_argument(monkeypatch):
     monkeypatch.setattr("sys.argv", ["fibonacci-kata"])
     with pytest.raises(SystemExit):

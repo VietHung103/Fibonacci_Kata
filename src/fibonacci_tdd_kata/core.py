@@ -1,4 +1,4 @@
-def fibonacci(n:int) -> int:
+def fibonacci(n: int) -> int:
     if n < 0:
         raise ValueError("Fibonacci must be non negative-integer.")
     if n <= 1:
