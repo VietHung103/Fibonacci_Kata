@@ -1,5 +1,5 @@
 [project]
-name = "fibonacci-tdd-kata"
+name = "fibonacci-tdd-kata-viethung103"
 version = "0.1.0"
 description = "A TDD Kata: Fibonacci, from notebook exploration to a tested, pubilshed package"
 readme = "README.md"
